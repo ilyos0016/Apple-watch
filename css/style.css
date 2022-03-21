@@ -90,6 +90,18 @@ body{
     background-repeat: no-repeat;
     background-position: right;
     border-bottom: 1px #DDDDDD solid;
+    margin-bottom: 6.8rem;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .hero{
+        background-image: url(./photos/watch@2x.jpg);
+    }
 }
 .hero-wrap {
 }
@@ -114,12 +126,18 @@ body{
 .vertical-line::before {
     content: "";
     width: 0.3rem;
-    height: 120px;
+    height: 100%;
     left: -40px;
     bottom: 0;
     position: absolute;
     background-color: #888888;
 
+}
+.hero-btn:hover{
+    opacity: 0.8;
+}
+.hero-btn:active{
+    opacity: 0.6;
 }
 .hero-btn {
     font-weight: 700;
@@ -131,5 +149,170 @@ body{
     background-color:  #EA625C;
     border: none;
 }
-.hero-img {
+/* main center */
+.main-center {
+}
+.main-center-list {
+    display: flex;
+    justify-content: space-between;
+}
+.main-center-item {
+    margin-bottom: 7rem;
+}
+.main-center-item-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #222;
+    margin-bottom: 3rem;
+}
+.main-center-item-text {
+    width: 280px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: #333;
+    margin-bottom: 2rem;
+
+}
+.span-dot {
+    display:inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #DDDDDD;
+}
+.span-dot:not(:last-child){
+    margin-right: 1rem;
+}
+.main-center-item-learn-more{
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.56rem;
+    color: #EA625C;
+    text-transform: uppercase;
+    margin-left: 5rem;
+    position: relative;
+}
+.line-main-center::before{
+    content: "";
+    width: 4rem;
+    height: 0.3rem;
+    left: -5rem;
+    bottom:1.2rem;
+    background-color: #EA625C;
+    position: absolute;
+}
+/* main bottom */
+.main-bottom {
+    padding: 7rem 0;
+}
+.main-bottom-list {
+    display: flex;
+    justify-content: space-between;
+}
+.main-bottom-wrap {
+    padding-top: 120px;
+}
+.main-bottom-title {
+    width: 380px;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6rem;
+    color: #000;
+    margin-bottom: 3rem;
+}
+.main-bottom-text {
+    width: 450px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #777;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    position: relative;
+}
+.main-item-btn:hover{
+    opacity: 0.8;
+} 
+.main-item-btn:active{
+    opacity: 0.6;
+}
+.main-item-btn {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #EA625C;
+    padding: 1.2rem 9rem;
+    border: none;
+}
+.main-bottom-img {
+    /* margin-left: auto; */
+}
+/* footer */
+.footer {
+    width: 1250px;
+    height: 830px;
+    background-image: url(../photos/runners.jpg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border-bottom: 1px #DDDDDD solid;
+    margin-bottom: 6.8rem;
+    padding: 240px 0;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .footer{
+        background-image: url(../photos/runners@2x.jpg);
+    }
+}
+
+.footer-item {
+    width: 490px;
+    margin-left: auto;
+}
+.footer-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6rem;
+    margin-bottom: 3rem;
+}
+.footer-text {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.vertical-line-footer::before{
+    content: "";
+    width: 0.3rem;
+    height: 100%;
+    left: -40px;
+    bottom: 0;
+    background-color: #fff;
+    position: absolute;
+
+}
+.footer-btn:hover{
+    opacity: 0.8;
+}
+.footer-btn:active{
+    opacity: 0.6;
+}
+.footer-btn {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #fff;
+    background-color: #EA625C;
+    padding: 1.2rem 4.6rem;
+    border: none;
 }
