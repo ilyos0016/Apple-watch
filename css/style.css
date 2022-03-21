@@ -1,0 +1,82 @@
+/* global styles */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    height: 100%;
+}
+body{
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Roboto','Arial', sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 1040px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+/* /global styles */
+
+
+
+/* HEADER SECTION */
+.header {
+    margin-top: 3rem;
+
+}
+.navigation {
+    display: flex;
+    align-items: center;
+
+}
+.header-logo-link {
+}
+.header-logo-img {
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+}
+.nav-list-item:not(:last-child) {
+    margin-right: 3rem;
+}
+.nav-list-item:last-child{
+    margin-right: 4rem;
+
+}
+.nav-list-item-link{
+    font-weight: 400;
+    line-height:2.25rem;
+    text-decoration: none;
+    color: #333;
+}
+.help {
+    position: relative;
+    font-weight: 400;
+    line-height:2.25rem;
+    text-decoration: none;
+    color: #333;
+    text-decoration: none;
+}
+.line::after{
+    content: "";
+    background-color: #333;
+    height: 1px;
+    width:100%;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+
+}
+
+/* MAIN SECTION */
