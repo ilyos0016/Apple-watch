@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
     <!--site icon -->
-    <link rel="icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="photos/applelogo.svg" type="image/x-icon">
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- styles -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/mini.css">
 </head>
 <body>
     <header class="header">
@@ -24,7 +25,7 @@
                 <a class="header-logo-link" href="index.html"><img class="header-logo-img" src="photos/applelogo.svg" alt="header logo img apple"></a>
                 <ul class="nav-list">
                     <li class="nav-list-item">
-                        <a class="nav-list-item-link" href="#">Home</a>
+                        <a class="nav-list-item-link active-nav-item" href="#">Home</a>
                     </li>
                     <li class="nav-list-item">
                         <a class="nav-list-item-link" href="#">About</a>
@@ -36,7 +37,9 @@
                         <a class="nav-list-item-link" href="#">Services</a>
                     </li>
                 </ul>
-                <a class="help line" href="#">How can we help you?</a>
+                <form class="form-nav" action="index.php">
+                    <input class="form-input-nav" type="search" aria-label="How can we help you?" required placeholder="How can we help you?" >
+                </form>
                 
             </nav>
         </div>

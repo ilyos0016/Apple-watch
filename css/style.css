@@ -1,3 +1,24 @@
+/* Downloaded fonts by Google Webfonts Helper */
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v29-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+  /* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v29-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* global styles */
 *,
 *::after,
@@ -6,6 +27,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* *:focus{
+    border:0.3rem dotted rgb(177, 154, 154);
+    outline: none;
+    box-sizing: border-box;
+} */
 html{
     font-size: 10px;
     height: 100%;
@@ -23,6 +49,33 @@ body{
     padding: 0 2rem;
     margin: 0 auto;
 }
+/* Custom proporty */
+:root{
+    --basic-color:#333;
+    --hero-color:#ddd;
+    --title-color:#000;
+    --text-vertical-line-color:#777;
+    --white:#fff;
+    --main-title-color:#222;
+    --btn-background-color:#EA625C;
+
+}
+.active-nav-item{
+    opacity: 0.6;
+    position: relative;
+
+}
+.active-nav-item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.3rem;
+    background-color:var(--basic-color);
+    left: 0;
+    bottom: -0.6rem;
+
+
+}
 /* /global styles */
 
 
@@ -38,9 +91,11 @@ body{
     align-items: center;
 
 }
-.header-logo-link {
+.header-logo-link path:hover{
+    opacity: 0.8;
 }
-.header-logo-img {
+.header-logo-link path:active{
+    opacity: 0.6;
 }
 .nav-list {
     display: flex;
@@ -55,23 +110,61 @@ body{
     margin-right: 4rem;
 
 }
+.nav-list-item-link:hover{
+    opacity: 0.8;
+}
+.nav-list-item-link:hover::after{
+    content: "";
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--basic-color);
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+}
+.nav-list-item-link:active{
+
+    opacity: 0.6;
+}
+
 .nav-list-item-link{
     font-weight: 400;
     line-height:2.25rem;
     text-decoration: none;
-    color: #333;
+    color:var(--basic-color);
+    position: relative;
+}
+.form-nav{
+    position: relative;
+}
+.form-input-nav {
+    border: none;
+    outline: none;
+    font-weight: 400;
+    line-height: 2.25rem;
+}
+.form-nav::after{
+    content: "";
+    width: 90%;
+    height: 0.1rem;
+    background-color:var(--basic-color);
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+
+
 }
 .help {
     position: relative;
     font-weight: 400;
     line-height:2.25rem;
     text-decoration: none;
-    color: #333;
+    color: var(--basic-color);
     text-decoration: none;
 }
 .line::after{
     content: "";
-    background-color: #333;
+    background-color: var(--basic-color);
     height: 1px;
     width:100%;
     left: 0;
@@ -89,7 +182,7 @@ body{
     background-image: url(../photos/watch.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    border-bottom: 1px #DDDDDD solid;
+    border-bottom: 1px var(--hero-color) solid;
     margin-bottom: 6.8rem;
 }
 @media
@@ -109,7 +202,7 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 700;
     font-size: 5rem;
     line-height: 6rem;
-    color: #000;
+    color: var(--title-color);
     padding-top: 88px;
     margin-bottom: 3rem;
 }
@@ -118,7 +211,7 @@ only screen and (                min-resolution: 2dppx) {
     height: 120px;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: #777;
+    color:var(--text-vertical-line-color);
     margin-bottom: 3rem;
     margin-left: 4.2rem;
     position: relative;
@@ -130,7 +223,7 @@ only screen and (                min-resolution: 2dppx) {
     left: -40px;
     bottom: 0;
     position: absolute;
-    background-color: #888888;
+    background-color:var(--text-vertical-line-color);
 
 }
 .hero-btn:hover{
@@ -143,10 +236,10 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.7rem;
-    color: #fff;
+    color: var(--white);
     padding: 1.2rem 3.85rem;
     text-transform: uppercase;
-    background-color:  #EA625C;
+    background-color: var(--btn-background-color);
     border: none;
 }
 /* main center */
@@ -163,7 +256,7 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.7rem;
-    color: #222;
+    color:var(--main-title-color);
     margin-bottom: 3rem;
 }
 .main-center-item-text {
@@ -171,7 +264,7 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.4rem;
-    color: #333;
+    color: var(--basic-color);
     margin-bottom: 2rem;
 
 }
@@ -179,7 +272,7 @@ only screen and (                min-resolution: 2dppx) {
     display:inline-block;
     width: 0.8rem;
     height: 0.8rem;
-    background-color: #DDDDDD;
+    background-color: var(--hero-color);
 }
 .span-dot:not(:last-child){
     margin-right: 1rem;
@@ -188,7 +281,7 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 2.56rem;
-    color: #EA625C;
+    color: var(--btn-background-color);
     text-transform: uppercase;
     margin-left: 5rem;
     position: relative;
@@ -199,7 +292,7 @@ only screen and (                min-resolution: 2dppx) {
     height: 0.3rem;
     left: -5rem;
     bottom:1.2rem;
-    background-color: #EA625C;
+    background-color:var(--btn-background-color);
     position: absolute;
 }
 /* main bottom */
@@ -218,14 +311,14 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 700;
     font-size: 5rem;
     line-height: 6rem;
-    color: #000;
+    color: var(--title-color);
     margin-bottom: 3rem;
 }
 .main-bottom-text {
     width: 450px;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: #777;
+    color: var(--text-vertical-line-color);
     margin-bottom: 3rem;
     margin-left: 4rem;
     position: relative;
@@ -241,8 +334,8 @@ only screen and (                min-resolution: 2dppx) {
     font-size: 1.8rem;
     line-height: 2.7rem;
     text-transform: uppercase;
-    color: #fff;
-    background-color: #EA625C;
+    color:var(--white);
+    background-color: var(--btn-background-color);
     padding: 1.2rem 9rem;
     border: none;
 }
@@ -256,7 +349,7 @@ only screen and (                min-resolution: 2dppx) {
     background-image: url(../photos/runners.jpg);
     background-repeat: no-repeat;
     margin: 0 auto;
-    border-bottom: 1px #DDDDDD solid;
+    border-bottom: 1px var(--hero-color) solid;
     margin-bottom: 6.8rem;
     padding: 240px 0;
 }
@@ -277,14 +370,14 @@ only screen and (                min-resolution: 2dppx) {
     margin-left: auto;
 }
 .footer-title {
-    color: #fff;
+    color: var(--white);
     font-weight: 700;
     font-size: 5rem;
     line-height: 6rem;
     margin-bottom: 3rem;
 }
 .footer-text {
-    color: #fff;
+    color:var(--white);
     font-size: 1.6rem;
     line-height: 2.4rem;
     margin-left: 4rem;
@@ -297,7 +390,7 @@ only screen and (                min-resolution: 2dppx) {
     height: 100%;
     left: -40px;
     bottom: 0;
-    background-color: #fff;
+    background-color: var(--white);
     position: absolute;
 
 }
@@ -311,8 +404,8 @@ only screen and (                min-resolution: 2dppx) {
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.7rem;
-    color: #fff;
-    background-color: #EA625C;
+    color:var(--white);
+    background-color: var(--btn-background-color);
     padding: 1.2rem 4.6rem;
     border: none;
 }
